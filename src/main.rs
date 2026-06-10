@@ -1,4 +1,5 @@
 mod enums;
+mod string_test;
 //由于Rust是亲函数式编程的所以默认没有保留类Class方案
 //但是存在方法集impl
 #[derive(Debug)]
@@ -46,4 +47,5 @@ fn main()
     let s2:&'static str = "I am a Femboy Yet";
     another_function(&s1,&s2);
     enums::light();
+    string_test::string_use();
 }
