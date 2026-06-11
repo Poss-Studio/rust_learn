@@ -1,3 +1,4 @@
+use std::io;
 mod enums;
 mod string_test;
 mod file;
@@ -32,7 +33,7 @@ fn another_function(v1:&'static str,v2:&'static str) -> (&'static str,&'static s
     println!("The profile of the Rexim entity is {:#?}",FemboyRexim::new());
     (v1,v2)
 }
-fn main()
+fn main() -> io::Result<()>
 {
     //Println是一个宏用于打印文本在命令行上
     println!("hello,World!");
@@ -49,4 +50,7 @@ fn main()
     another_function(&s1,&s2);
     enums::light();
     string_test::string_use();
+    let nulls = file::read_file()?;
+    println!("{:?}",nulls);
+    Ok(())
 }
