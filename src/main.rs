@@ -2,6 +2,7 @@ use std::io;
 mod enums;
 mod string_test;
 mod file;
+mod rectangle_sample;
 //由于Rust是亲函数式编程的所以默认没有保留类Class方案
 //但是存在方法集impl
 #[derive(Debug)]
